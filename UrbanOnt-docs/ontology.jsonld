@@ -1,0 +1,1555 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://schema.org/Place"
+    }, {
+      "@id" : "https://schema.org/Trip"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://schema.org/BusOrCoach"
+    }, {
+      "@id" : "https://schema.org/Car"
+    }, {
+      "@id" : "https://schema.org/Motorcycle"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://schema.org/Place"
+    }, {
+      "@id" : "https://schema.org/Trip"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#hasCurrency"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#hasValue"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.urbanont.com/ontology/urban#Road"
+    }, {
+      "@id" : "https://schema.org/Landform"
+    }, {
+      "@id" : "https://schema.org/LandmarksOrHistoricalBuildings"
+    }, {
+      "@id" : "https://schema.org/SportsActivityLocation"
+    }, {
+      "@id" : "https://schema.org/TouristAttraction"
+    } ]
+  } ]
+}, {
+  "@id" : "http://creativecommons.org/ns#license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/",
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2012-06-14"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "http://purl.org/dc/aboutdcmi#DCMI"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Dublin Core Metadata Element Set, Version 1.1"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/contributor",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The guidelines for using names of persons or organizations as creators also apply to contributors.  Typically, the name of a Contributor should be used to indicate the entity."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity responsible for making contributions to the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contributor"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/coverage",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Coverage"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity primarily responsible for making the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Creator"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/date",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A point or period of time associated with an event in the lifecycle of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An account of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Description"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/format",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The file format, physical medium, or dimensions of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Format"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/identifier",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to identify the resource by means of a string conforming to an identification system."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An unambiguous reference to the resource within a given context."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Identifier"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/language",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A language of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Language"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/publisher",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity responsible for making the resource available."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Publisher"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/relation",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A related resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/rights",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Information about rights held in and over the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rights"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/source",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A related resource from which the described resource is derived."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Source"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/subject",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Typically, the subject will be represented using keywords, key phrases, or classification codes.  Recommended best practice is to use a controlled vocabulary."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The topic of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Subject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/subject) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A name given to the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Title"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/type",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The nature or genre of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://creativecommons.org/ns#license" : [ {
+    "@value" : "This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Ontología de urbanismo para la gestión y planificación de elementos relacionados con la urbe."
+  }, {
+    "@language" : "en",
+    "@value" : "The urbanism ontology for improving the management and planning of urban related stuff."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ontology about urban planning"
+  }, {
+    "@language" : "es",
+    "@value" : "Ontología sobre planificación urbana"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  }, {
+    "@id" : "http://www.w3.org/ns/lemon/lexicog"
+  }, {
+    "@id" : "http://www.w3.org/ns/lemon/lime"
+  }, {
+    "@id" : "http://www.w3.org/ns/lemon/ontolex"
+  }, {
+    "@id" : "http://www.w3.org/ns/lemon/vartrans"
+  }, {
+    "@id" : "https://schema.org/"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#Animal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Animals are multicellular, eukaryotic organisms in the biological kingdom Animalia."
+  }, {
+    "@language" : "es",
+    "@value" : "En la clasificación científica de los seres vivos, los animales (Animalia) o metazoos (Metazoa) constituyen un reino que reúne un amplio grupo de organismos que son eucariotas, heterótrofos, pluricelulares y tisulares (excepto los poríferos)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Animal"
+  }, {
+    "@language" : "es",
+    "@value" : "Animal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#LifeBeing"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#Plant"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#Currency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A system of money in general use in a particular country."
+  }, {
+    "@language" : "es",
+    "@value" : "Un sistema de moneda para ser usado en un país."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Currency"
+  }, {
+    "@language" : "es",
+    "@value" : "Moneda"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#Price"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#Highway",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A public road, especially an important road that joins cities or towns together."
+  }, {
+    "@language" : "es",
+    "@value" : "Carretera con calzadas separadas para los dos sentidos de la circulación, cada una de ellas con dos o más carriles, sin cruces a nivel."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Autopista"
+  }, {
+    "@language" : "en",
+    "@value" : "Highway"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#Road"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#Street"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#LifeBeing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Life Being living in a particular Place."
+  }, {
+    "@language" : "es",
+    "@value" : "Ser vivo que vive en un determinado lugar."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Life Being"
+  }, {
+    "@language" : "es",
+    "@value" : "Ser Vivo"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#Plant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "En biología, se denomina plantas a los organismos con células vegetales que poseen paredes celulares y se componen principalmente de celulosa."
+  }, {
+    "@language" : "en",
+    "@value" : "Plants are the eukaryotes that form the kingdom Plantae; they are predominantly photosynthetic. This means that they obtain their energy from sunlight, using chloroplasts derived from endosymbiosis with cyanobacteria to produce sugars from carbon dioxide and water."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Plant"
+  }, {
+    "@language" : "es",
+    "@value" : "Planta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#LifeBeing"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#Price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "La cantidad de dinero esperada, requerida o dada en forma de pago por algo."
+  }, {
+    "@language" : "en",
+    "@value" : "The amount of money expected, required, or given in payment for something."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Precio"
+  }, {
+    "@language" : "en",
+    "@value" : "Price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#Road",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A long, hard surface built for vehicles to travel along."
+  }, {
+    "@language" : "es",
+    "@value" : "Camino público, ancho y espacioso, pavimentado y dispuesto para el tránsito de vehículos."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Carretera"
+  }, {
+    "@language" : "en",
+    "@value" : "Road"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://schema.org/Place"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#Street",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A road in a city or town that has buildings that are usually close together along one or both sides."
+  }, {
+    "@language" : "es",
+    "@value" : "Vía pública, habitualmente asfaltada o empedrada, entre edificios o solares."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Calle"
+  }, {
+    "@language" : "en",
+    "@value" : "Street"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#Road"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#capacity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of people that can be at the same time in a place."
+  }, {
+    "@language" : "es",
+    "@value" : "Número de personas que puede estar en un lugar al mismo tiempo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "capacidad"
+  }, {
+    "@language" : "en",
+    "@value" : "capacity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#carretera_n_es",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalEntry" ],
+  "http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#lexicalForm" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#carretera_n_es_form"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#sense" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#carretera_n_es_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#carretera_n_es_form",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#Form" ],
+  "http://www.w3.org/ns/lemon/ontolex#writtenRep" : [ {
+    "@language" : "es",
+    "@value" : "carretera"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#carretera_n_es_sense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalSense" ],
+  "http://www.w3.org/ns/lemon/lexicog#usageExample" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#carretera_n_es_sense_ex"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#road_n_en_sense_concept"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#carretera_n_es_sense_ex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/lexicog#UsageExample" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@language" : "es",
+    "@value" : "Vivimos al lado de una carretera tranquila."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#currency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación que determina que una cantidad monetaria está bajo una moneda."
+  }, {
+    "@language" : "en",
+    "@value" : "Relation that states that a monetary amount is referenced by the currency."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#Currency"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "currency"
+  }, {
+    "@language" : "es",
+    "@value" : "moneda"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#dateBuilt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date at which the building was built."
+  }, {
+    "@language" : "es",
+    "@value" : "Fecha en la que una construcción fue realizada."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "date built"
+  }, {
+    "@language" : "es",
+    "@value" : "fecha de construcción"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#dateDeclaredHistorical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date at which the historical building was declared as such."
+  }, {
+    "@language" : "es",
+    "@value" : "Fecha en la que el bien histórico comenzó a ser tratado como tal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/LandmarksOrHistoricalBuildings"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Date of declaration"
+  }, {
+    "@language" : "es",
+    "@value" : "Fecha de declaración"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#dimensiones_adj_es",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalEntry" ],
+  "http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#lexicalForm" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#dimensiones_adj_es_form"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#sense" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#dimensiones_adj_es_form",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#Form" ],
+  "http://www.w3.org/ns/lemon/ontolex#writtenRep" : [ {
+    "@language" : "es",
+    "@value" : "dimensiones"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalSense" ],
+  "http://www.w3.org/ns/lemon/lexicog#usageExample" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense_ex"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en_sense_concept"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense_ex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/lexicog#UsageExample" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@language" : "es",
+    "@value" : "Las dimensiones del piso son de 80 metros cuadrados."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#en_lexicon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/lime#Lexicon" ],
+  "http://purl.org/dc/elements/1.1/language" : [ {
+    "@value" : "en"
+  } ],
+  "http://www.w3.org/ns/lemon/lime#entry" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en"
+  }, {
+    "@id" : "http://www.urbanont.com/ontology/urban#road_n_en"
+  }, {
+    "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en"
+  }, {
+    "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#es_lexicon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/lime#Lexicon" ],
+  "http://purl.org/dc/elements/1.1/language" : [ {
+    "@value" : "es"
+  } ],
+  "http://www.w3.org/ns/lemon/lime#entry" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#carretera_n_es"
+  }, {
+    "@id" : "http://www.urbanont.com/ontology/urban#dimensiones_adj_es"
+  }, {
+    "@id" : "http://www.urbanont.com/ontology/urban#organizacion_n_es"
+  }, {
+    "@id" : "http://www.urbanont.com/ontology/urban#valor_adj_es"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#hasCurrency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El precio usa un sistema monetario."
+  }, {
+    "@language" : "en",
+    "@value" : "The price uses a currency system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#Price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has currency"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene moneda"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#Currency"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#hasMaintenancePrice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El lugar o viaje tiene un coste de mantenimiento."
+  }, {
+    "@language" : "en",
+    "@value" : "The Place or trip has a maintenance rate."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has maintenance price"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene precio de mantenimiento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#Price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#hasPrice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El lugar o viaje tiene un coste de acceso."
+  }, {
+    "@language" : "en",
+    "@value" : "The Place or trip has an access rate."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has access price"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene precio de acceso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#Price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#hasValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación que indica que el sujeto tiene el valor de un objeto."
+  }, {
+    "@language" : "en",
+    "@value" : "Relation that states that something has a value of an object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#Price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has value"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene valor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#height",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Distancia de arriba a abajo de algo."
+  }, {
+    "@language" : "en",
+    "@value" : "The distance from the top to the bottom of something."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "altura"
+  }, {
+    "@language" : "en",
+    "@value" : "height"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#historicalBuildingCatalogue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tipo según la ley 16/1985"
+  }, {
+    "@language" : "en",
+    "@value" : "Type of historical building according to the law 16/1985"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/LandmarksOrHistoricalBuildings"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de Edificio histórico"
+  }, {
+    "@language" : "en",
+    "@value" : "Type of historical building"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#inspectionDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date at which an inspection takes place."
+  }, {
+    "@language" : "es",
+    "@value" : "Fecha en la que ocurre una inspección."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "fecha de inspección"
+  }, {
+    "@language" : "en",
+    "@value" : "inspection date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#isOwnedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El vehículo es propiedad de una organización."
+  }, {
+    "@language" : "en",
+    "@value" : "The vehicle is property of an organization."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es propiedad de"
+  }, {
+    "@language" : "en",
+    "@value" : "is owned by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://schema.org/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#isPerformedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El viaje es realizado por el vehículo."
+  }, {
+    "@language" : "en",
+    "@value" : "The trip is performed by the vehicle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es realizado por"
+  }, {
+    "@language" : "en",
+    "@value" : "is performed by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://schema.org/Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#isProtected",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica si el ser vivo está en peligro de extinción o no."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates whether the Life Being is in risk of extinction or not."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#LifeBeing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Peligro de extinción"
+  }, {
+    "@language" : "en",
+    "@value" : "Risk of extinction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#length",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Magnitud física que expresa la distancia entre dos puntos, y cuya unidad en el sistema internacional es el metro."
+  }, {
+    "@language" : "en",
+    "@value" : "The measurement of something from end to end or along its longest side."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "length"
+  }, {
+    "@language" : "es",
+    "@value" : "longitud"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#lives",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica dónde vive el ser vivo."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates where the Life Being lives."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#LifeBeing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "lives in"
+  }, {
+    "@language" : "es",
+    "@value" : "vive en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://schema.org/Place"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#organizacion_n_es",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalEntry" ],
+  "http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#noun"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#lexicalForm" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#organizacion_n_es_form"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#sense" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#organizacion_n_es_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#organizacion_n_es_form",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#Form" ],
+  "http://www.w3.org/ns/lemon/ontolex#writtenRep" : [ {
+    "@language" : "es",
+    "@value" : "organización"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#organizacion_n_es_sense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalSense" ],
+  "http://www.w3.org/ns/lemon/lexicog#usageExample" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#organizacion_n_es_sense_ex"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en_sense_concept"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#organizacion_n_es_sense_ex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/lexicog#UsageExample" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@language" : "es",
+    "@value" : "Me voy a apuntar a una Organización sin ánimo de lucro."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalEntry" ],
+  "http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#noun"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#lexicalForm" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en_form"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#sense" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en_form",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#Form" ],
+  "http://www.w3.org/ns/lemon/ontolex#writtenRep" : [ {
+    "@language" : "en",
+    "@value" : "organization"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en_sense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalSense" ],
+  "http://www.w3.org/ns/lemon/lexicog#usageExample" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en_sense_ex"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en_sense_concept"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en_sense_concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalConcept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A group of people who work together in an organized way for a shared purpose."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en_sense_ex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/lexicog#UsageExample" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@language" : "en",
+    "@value" : "The article was about international aid organizations."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#organization_n_sense-organizacion_n_es_sense-tr",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/vartrans#Translation" ],
+  "http://www.w3.org/ns/lemon/vartrans#source" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#organization_n_en_sense"
+  } ],
+  "https://schema.org/target" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#organizacion_n_es_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#road_n_en",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalEntry" ],
+  "http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#noun"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#lexicalForm" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#road_n_en_form"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#sense" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#road_n_en_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#road_n_en_form",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#Form" ],
+  "http://www.w3.org/ns/lemon/ontolex#writtenRep" : [ {
+    "@language" : "en",
+    "@value" : "road"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#road_n_en_sense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalSense" ],
+  "http://www.w3.org/ns/lemon/lexicog#usageExample" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#road_n_en_sense_ex"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#road_n_en_sense_concept"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#road_n_en_sense-carretera_n_es_sense-tr",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/vartrans#Translation" ],
+  "http://www.w3.org/ns/lemon/vartrans#source" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#road_n_en_sense"
+  } ],
+  "https://schema.org/target" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#carretera_n_es_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#road_n_en_sense_concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalConcept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A long, hard surface built for vehicles to travel along."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#road_n_en_sense_ex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/lexicog#UsageExample" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@language" : "en",
+    "@value" : "We live on a quiet road."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalEntry" ],
+  "http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#lexicalForm" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en_form"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#sense" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en_form",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#Form" ],
+  "http://www.w3.org/ns/lemon/ontolex#writtenRep" : [ {
+    "@language" : "en",
+    "@value" : "size"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en_sense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalSense" ],
+  "http://www.w3.org/ns/lemon/lexicog#usageExample" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en_sense_ex"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en_sense_concept"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en_sense-dimensiones_adj_es_sense-tr",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/vartrans#Translation" ],
+  "http://www.w3.org/ns/lemon/vartrans#source" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en_sense"
+  } ],
+  "https://schema.org/target" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en_sense_concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalConcept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "How large or small something or someone is."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#size_adj_en_sense_ex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/lexicog#UsageExample" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@language" : "en",
+    "@value" : "The size of the floor is 80 square feet."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#standingCapacity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of passengers that can travel standing in the vehicle."
+  }, {
+    "@language" : "es",
+    "@value" : "Número de pasajeros que pueden ir de pie en el vehículo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Number of standing passengers"
+  }, {
+    "@language" : "es",
+    "@value" : "Número de pasajeros de pie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#valor_adj_es",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalEntry" ],
+  "http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#lexicalForm" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#valor_adj_es_form"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#sense" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#valor_adj_es_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#valor_adj_es_form",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#Form" ],
+  "http://www.w3.org/ns/lemon/ontolex#writtenRep" : [ {
+    "@language" : "es",
+    "@value" : "valor"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#valor_adj_es_sense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalSense" ],
+  "http://www.w3.org/ns/lemon/lexicog#usageExample" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#valor_adj_es_sense_ex"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en_sense_concept"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#valor_adj_es_sense_ex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/lexicog#UsageExample" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@language" : "es",
+    "@value" : "El valor del inmueble es de 150.000€."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalEntry" ],
+  "http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#lexicalForm" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en_form"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#sense" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en_form",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#Form" ],
+  "http://www.w3.org/ns/lemon/ontolex#writtenRep" : [ {
+    "@value" : "value"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en_sense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalSense" ],
+  "http://www.w3.org/ns/lemon/lexicog#usageExample" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en_sense_ex"
+  } ],
+  "http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en_sense_concept"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en_sense-valor_adj_es_sense-tr",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/vartrans#Translation" ],
+  "http://www.w3.org/ns/lemon/vartrans#source" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en_sense"
+  } ],
+  "https://schema.org/target" : [ {
+    "@id" : "http://www.urbanont.com/ontology/urban#valor_adj_es_sense"
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en_sense_concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/ontolex#LexicalConcept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The amount of money that can be received for something."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#value_adj_en_sense_ex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/lemon/lexicog#UsageExample" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@language" : "en",
+    "@value" : "The value of the building is 150.000€."
+  } ]
+}, {
+  "@id" : "http://www.urbanont.com/ontology/urban#width",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Distancia a través de algo de un lado a otro."
+  }, {
+    "@language" : "en",
+    "@value" : "The distance across something from one side to the other."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "ancho"
+  }, {
+    "@language" : "en",
+    "@value" : "width"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/BusOrCoach",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/Car",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/Landform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/LandmarksOrHistoricalBuildings",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/LocalBusiness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://schema.org/SportsOrganization"
+  } ]
+}, {
+  "@id" : "https://schema.org/Motorcycle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/SportsActivityLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/SportsOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/TouristAttraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/Trip",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/Vehicle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "https://schema.org/target",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

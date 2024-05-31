@@ -1,0 +1,1643 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.urbanont.com/ontology/urban#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.urbanont.com/ontology/urban#">
+    <Prefix name="" IRI="http://www.urbanont.com/ontology/urban#"/>
+    <Prefix name="cc" IRI="http://creativecommons.org/ns#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="ns" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="schema" IRI="https://schema.org/"/>
+    <Prefix name="lexicog" IRI="http://www.w3.org/ns/lemon/lexicog#"/>
+    <Prefix name="ontolex" IRI="http://www.w3.org/ns/lemon/ontolex#"/>
+    <Prefix name="vartrans" IRI="http://www.w3.org/ns/lemon/vartrans#"/>
+    <Import>http://purl.org/dc/elements/1.1/</Import>
+    <Import>http://www.lexinfo.net/ontology/2.0/lexinfo</Import>
+    <Import>http://www.w3.org/ns/lemon/lexicog</Import>
+    <Import>http://www.w3.org/ns/lemon/lime</Import>
+    <Import>http://www.w3.org/ns/lemon/ontolex</Import>
+    <Import>http://www.w3.org/ns/lemon/vartrans</Import>
+    <Import>https://schema.org/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="cc:license"/>
+        <Literal>This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="es">Ontología de urbanismo para la gestión y planificación de elementos relacionados con la urbe.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">The urbanism ontology for improving the management and planning of urban related stuff.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">Ontology about urban planning</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="es">Ontología sobre planificación urbana</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="Animal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Currency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Highway"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LifeBeing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Plant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Price"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Road"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Street"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasCurrency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasMaintenancePrice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPrice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isOwnedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isPerformedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="lives"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="capacity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="currency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dateBuilt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dateDeclaredHistorical"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="height"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="historicalBuildingCatalogue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="inspectionDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="isProtected"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="length"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="standingCapacity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="width"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="carretera_n_es"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="carretera_n_es_sense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="carretera_n_es_sense_ex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="dimensiones_adj_es"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="dimensiones_adj_es_sense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="dimensiones_adj_es_sense_ex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="en_lexicon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="es_lexicon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="organizacion_n_es"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="organizacion_n_es_sense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="organizacion_n_es_sense_ex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="organization_n_en"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="organization_n_en_sense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="organization_n_en_sense_concept"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="organization_n_en_sense_ex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="organization_n_sense-organizacion_n_es_sense-tr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="road_n_en"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="road_n_en_sense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="road_n_en_sense-carretera_n_es_sense-tr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="road_n_en_sense_concept"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="road_n_en_sense_ex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="size_adj_en"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="size_adj_en_sense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="size_adj_en_sense-dimensiones_adj_es_sense-tr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="size_adj_en_sense_concept"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="size_adj_en_sense_ex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="valor_adj_es"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="valor_adj_es_sense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="valor_adj_es_sense_ex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="value_adj_en"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="value_adj_en_sense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="value_adj_en_sense-valor_adj_es_sense-tr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="value_adj_en_sense_concept"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="value_adj_en_sense_ex"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="cc:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="size_adj_en_form"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="valor_adj_es_form"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="value_adj_en_form"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="carretera_n_es_form"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="road_n_en_form"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="organizacion_n_es_form"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="dimensiones_adj_es_form"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="organization_n_en_form"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Animal"/>
+        <Class IRI="LifeBeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Highway"/>
+        <Class IRI="Road"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Plant"/>
+        <Class IRI="LifeBeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Price"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasCurrency"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Price"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="hasValue"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Road"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Street"/>
+        <Class IRI="Road"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="Animal"/>
+        <Class IRI="Plant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Currency"/>
+        <Class IRI="Price"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Highway"/>
+        <Class IRI="Street"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Road"/>
+        <Class abbreviatedIRI="schema:Landform"/>
+        <Class abbreviatedIRI="schema:LandmarksOrHistoricalBuildings"/>
+        <Class abbreviatedIRI="schema:SportsActivityLocation"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="schema:BusOrCoach"/>
+        <Class abbreviatedIRI="schema:Car"/>
+        <Class abbreviatedIRI="schema:Motorcycle"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="schema:LocalBusiness"/>
+        <Class abbreviatedIRI="schema:SportsOrganization"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalEntry"/>
+        <NamedIndividual IRI="carretera_n_es"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:Form"/>
+        <NamedIndividual IRI="carretera_n_es_form"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalSense"/>
+        <NamedIndividual IRI="carretera_n_es_sense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="lexicog:UsageExample"/>
+        <NamedIndividual IRI="carretera_n_es_sense_ex"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalEntry"/>
+        <NamedIndividual IRI="dimensiones_adj_es"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:Form"/>
+        <NamedIndividual IRI="dimensiones_adj_es_form"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalSense"/>
+        <NamedIndividual IRI="dimensiones_adj_es_sense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="lexicog:UsageExample"/>
+        <NamedIndividual IRI="dimensiones_adj_es_sense_ex"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/lemon/lime#Lexicon"/>
+        <NamedIndividual IRI="en_lexicon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/lemon/lime#Lexicon"/>
+        <NamedIndividual IRI="es_lexicon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalEntry"/>
+        <NamedIndividual IRI="organizacion_n_es"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:Form"/>
+        <NamedIndividual IRI="organizacion_n_es_form"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalSense"/>
+        <NamedIndividual IRI="organizacion_n_es_sense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="lexicog:UsageExample"/>
+        <NamedIndividual IRI="organizacion_n_es_sense_ex"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalEntry"/>
+        <NamedIndividual IRI="organization_n_en"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:Form"/>
+        <NamedIndividual IRI="organization_n_en_form"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalSense"/>
+        <NamedIndividual IRI="organization_n_en_sense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalConcept"/>
+        <NamedIndividual IRI="organization_n_en_sense_concept"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="lexicog:UsageExample"/>
+        <NamedIndividual IRI="organization_n_en_sense_ex"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="vartrans:Translation"/>
+        <NamedIndividual IRI="organization_n_sense-organizacion_n_es_sense-tr"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalEntry"/>
+        <NamedIndividual IRI="road_n_en"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:Form"/>
+        <NamedIndividual IRI="road_n_en_form"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalSense"/>
+        <NamedIndividual IRI="road_n_en_sense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="vartrans:Translation"/>
+        <NamedIndividual IRI="road_n_en_sense-carretera_n_es_sense-tr"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalConcept"/>
+        <NamedIndividual IRI="road_n_en_sense_concept"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="lexicog:UsageExample"/>
+        <NamedIndividual IRI="road_n_en_sense_ex"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalEntry"/>
+        <NamedIndividual IRI="size_adj_en"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:Form"/>
+        <NamedIndividual IRI="size_adj_en_form"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalSense"/>
+        <NamedIndividual IRI="size_adj_en_sense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="vartrans:Translation"/>
+        <NamedIndividual IRI="size_adj_en_sense-dimensiones_adj_es_sense-tr"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalConcept"/>
+        <NamedIndividual IRI="size_adj_en_sense_concept"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="lexicog:UsageExample"/>
+        <NamedIndividual IRI="size_adj_en_sense_ex"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalEntry"/>
+        <NamedIndividual IRI="valor_adj_es"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:Form"/>
+        <NamedIndividual IRI="valor_adj_es_form"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalSense"/>
+        <NamedIndividual IRI="valor_adj_es_sense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="lexicog:UsageExample"/>
+        <NamedIndividual IRI="valor_adj_es_sense_ex"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalEntry"/>
+        <NamedIndividual IRI="value_adj_en"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:Form"/>
+        <NamedIndividual IRI="value_adj_en_form"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalSense"/>
+        <NamedIndividual IRI="value_adj_en_sense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="vartrans:Translation"/>
+        <NamedIndividual IRI="value_adj_en_sense-valor_adj_es_sense-tr"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontolex:LexicalConcept"/>
+        <NamedIndividual IRI="value_adj_en_sense_concept"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="lexicog:UsageExample"/>
+        <NamedIndividual IRI="value_adj_en_sense_ex"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech"/>
+        <NamedIndividual IRI="carretera_n_es"/>
+        <NamedIndividual IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:lexicalForm"/>
+        <NamedIndividual IRI="carretera_n_es"/>
+        <NamedIndividual IRI="carretera_n_es_form"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:sense"/>
+        <NamedIndividual IRI="carretera_n_es"/>
+        <NamedIndividual IRI="carretera_n_es_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="lexicog:usageExample"/>
+        <NamedIndividual IRI="carretera_n_es_sense"/>
+        <NamedIndividual IRI="carretera_n_es_sense_ex"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:isLexicalizedSenseOf"/>
+        <NamedIndividual IRI="carretera_n_es_sense"/>
+        <NamedIndividual IRI="road_n_en_sense_concept"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech"/>
+        <NamedIndividual IRI="dimensiones_adj_es"/>
+        <NamedIndividual IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:lexicalForm"/>
+        <NamedIndividual IRI="dimensiones_adj_es"/>
+        <NamedIndividual IRI="dimensiones_adj_es_form"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:sense"/>
+        <NamedIndividual IRI="dimensiones_adj_es"/>
+        <NamedIndividual IRI="dimensiones_adj_es_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="lexicog:usageExample"/>
+        <NamedIndividual IRI="dimensiones_adj_es_sense"/>
+        <NamedIndividual IRI="dimensiones_adj_es_sense_ex"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:isLexicalizedSenseOf"/>
+        <NamedIndividual IRI="dimensiones_adj_es_sense"/>
+        <NamedIndividual IRI="size_adj_en_sense_concept"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/lemon/lime#entry"/>
+        <NamedIndividual IRI="en_lexicon"/>
+        <NamedIndividual IRI="organization_n_en"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/lemon/lime#entry"/>
+        <NamedIndividual IRI="en_lexicon"/>
+        <NamedIndividual IRI="road_n_en"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/lemon/lime#entry"/>
+        <NamedIndividual IRI="en_lexicon"/>
+        <NamedIndividual IRI="size_adj_en"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/lemon/lime#entry"/>
+        <NamedIndividual IRI="en_lexicon"/>
+        <NamedIndividual IRI="value_adj_en"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/lemon/lime#entry"/>
+        <NamedIndividual IRI="es_lexicon"/>
+        <NamedIndividual IRI="carretera_n_es"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/lemon/lime#entry"/>
+        <NamedIndividual IRI="es_lexicon"/>
+        <NamedIndividual IRI="dimensiones_adj_es"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/lemon/lime#entry"/>
+        <NamedIndividual IRI="es_lexicon"/>
+        <NamedIndividual IRI="organizacion_n_es"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/lemon/lime#entry"/>
+        <NamedIndividual IRI="es_lexicon"/>
+        <NamedIndividual IRI="valor_adj_es"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech"/>
+        <NamedIndividual IRI="organizacion_n_es"/>
+        <NamedIndividual IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#noun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:lexicalForm"/>
+        <NamedIndividual IRI="organizacion_n_es"/>
+        <NamedIndividual IRI="organizacion_n_es_form"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:sense"/>
+        <NamedIndividual IRI="organizacion_n_es"/>
+        <NamedIndividual IRI="organizacion_n_es_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="lexicog:usageExample"/>
+        <NamedIndividual IRI="organizacion_n_es_sense"/>
+        <NamedIndividual IRI="organizacion_n_es_sense_ex"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:isLexicalizedSenseOf"/>
+        <NamedIndividual IRI="organizacion_n_es_sense"/>
+        <NamedIndividual IRI="organization_n_en_sense_concept"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech"/>
+        <NamedIndividual IRI="organization_n_en"/>
+        <NamedIndividual IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#noun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:lexicalForm"/>
+        <NamedIndividual IRI="organization_n_en"/>
+        <NamedIndividual IRI="organization_n_en_form"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:sense"/>
+        <NamedIndividual IRI="organization_n_en"/>
+        <NamedIndividual IRI="organization_n_en_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="lexicog:usageExample"/>
+        <NamedIndividual IRI="organization_n_en_sense"/>
+        <NamedIndividual IRI="organization_n_en_sense_ex"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:isLexicalizedSenseOf"/>
+        <NamedIndividual IRI="organization_n_en_sense"/>
+        <NamedIndividual IRI="organization_n_en_sense_concept"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="vartrans:source"/>
+        <NamedIndividual IRI="organization_n_sense-organizacion_n_es_sense-tr"/>
+        <NamedIndividual IRI="organization_n_en_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="schema:target"/>
+        <NamedIndividual IRI="organization_n_sense-organizacion_n_es_sense-tr"/>
+        <NamedIndividual IRI="organizacion_n_es_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech"/>
+        <NamedIndividual IRI="road_n_en"/>
+        <NamedIndividual IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#noun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:lexicalForm"/>
+        <NamedIndividual IRI="road_n_en"/>
+        <NamedIndividual IRI="road_n_en_form"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:sense"/>
+        <NamedIndividual IRI="road_n_en"/>
+        <NamedIndividual IRI="road_n_en_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="lexicog:usageExample"/>
+        <NamedIndividual IRI="road_n_en_sense"/>
+        <NamedIndividual IRI="road_n_en_sense_ex"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:isLexicalizedSenseOf"/>
+        <NamedIndividual IRI="road_n_en_sense"/>
+        <NamedIndividual IRI="road_n_en_sense_concept"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="vartrans:source"/>
+        <NamedIndividual IRI="road_n_en_sense-carretera_n_es_sense-tr"/>
+        <NamedIndividual IRI="road_n_en_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="schema:target"/>
+        <NamedIndividual IRI="road_n_en_sense-carretera_n_es_sense-tr"/>
+        <NamedIndividual IRI="carretera_n_es_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech"/>
+        <NamedIndividual IRI="size_adj_en"/>
+        <NamedIndividual IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:lexicalForm"/>
+        <NamedIndividual IRI="size_adj_en"/>
+        <NamedIndividual IRI="size_adj_en_form"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:sense"/>
+        <NamedIndividual IRI="size_adj_en"/>
+        <NamedIndividual IRI="size_adj_en_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="lexicog:usageExample"/>
+        <NamedIndividual IRI="size_adj_en_sense"/>
+        <NamedIndividual IRI="size_adj_en_sense_ex"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:isLexicalizedSenseOf"/>
+        <NamedIndividual IRI="size_adj_en_sense"/>
+        <NamedIndividual IRI="size_adj_en_sense_concept"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="vartrans:source"/>
+        <NamedIndividual IRI="size_adj_en_sense-dimensiones_adj_es_sense-tr"/>
+        <NamedIndividual IRI="size_adj_en_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="schema:target"/>
+        <NamedIndividual IRI="size_adj_en_sense-dimensiones_adj_es_sense-tr"/>
+        <NamedIndividual IRI="dimensiones_adj_es_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech"/>
+        <NamedIndividual IRI="valor_adj_es"/>
+        <NamedIndividual IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:lexicalForm"/>
+        <NamedIndividual IRI="valor_adj_es"/>
+        <NamedIndividual IRI="valor_adj_es_form"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:sense"/>
+        <NamedIndividual IRI="valor_adj_es"/>
+        <NamedIndividual IRI="valor_adj_es_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="lexicog:usageExample"/>
+        <NamedIndividual IRI="valor_adj_es_sense"/>
+        <NamedIndividual IRI="valor_adj_es_sense_ex"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:isLexicalizedSenseOf"/>
+        <NamedIndividual IRI="valor_adj_es_sense"/>
+        <NamedIndividual IRI="value_adj_en_sense_concept"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech"/>
+        <NamedIndividual IRI="value_adj_en"/>
+        <NamedIndividual IRI="http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:lexicalForm"/>
+        <NamedIndividual IRI="value_adj_en"/>
+        <NamedIndividual IRI="value_adj_en_form"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:sense"/>
+        <NamedIndividual IRI="value_adj_en"/>
+        <NamedIndividual IRI="value_adj_en_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="lexicog:usageExample"/>
+        <NamedIndividual IRI="value_adj_en_sense"/>
+        <NamedIndividual IRI="value_adj_en_sense_ex"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontolex:isLexicalizedSenseOf"/>
+        <NamedIndividual IRI="value_adj_en_sense"/>
+        <NamedIndividual IRI="value_adj_en_sense_concept"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="vartrans:source"/>
+        <NamedIndividual IRI="value_adj_en_sense-valor_adj_es_sense-tr"/>
+        <NamedIndividual IRI="value_adj_en_sense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="schema:target"/>
+        <NamedIndividual IRI="value_adj_en_sense-valor_adj_es_sense-tr"/>
+        <NamedIndividual IRI="valor_adj_es_sense"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="ontolex:writtenRep"/>
+        <NamedIndividual IRI="carretera_n_es_form"/>
+        <Literal xml:lang="es">carretera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="rdf:value"/>
+        <NamedIndividual IRI="carretera_n_es_sense_ex"/>
+        <Literal xml:lang="es">Vivimos al lado de una carretera tranquila.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="ontolex:writtenRep"/>
+        <NamedIndividual IRI="dimensiones_adj_es_form"/>
+        <Literal xml:lang="es">dimensiones</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="rdf:value"/>
+        <NamedIndividual IRI="dimensiones_adj_es_sense_ex"/>
+        <Literal xml:lang="es">Las dimensiones del piso son de 80 metros cuadrados.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dc:language"/>
+        <NamedIndividual IRI="en_lexicon"/>
+        <Literal>en</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dc:language"/>
+        <NamedIndividual IRI="es_lexicon"/>
+        <Literal>es</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="ontolex:writtenRep"/>
+        <NamedIndividual IRI="organizacion_n_es_form"/>
+        <Literal xml:lang="es">organización</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="rdf:value"/>
+        <NamedIndividual IRI="organizacion_n_es_sense_ex"/>
+        <Literal xml:lang="es">Me voy a apuntar a una Organización sin ánimo de lucro.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="ontolex:writtenRep"/>
+        <NamedIndividual IRI="organization_n_en_form"/>
+        <Literal xml:lang="en">organization</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="rdf:value"/>
+        <NamedIndividual IRI="organization_n_en_sense_ex"/>
+        <Literal xml:lang="en">The article was about international aid organizations.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="ontolex:writtenRep"/>
+        <NamedIndividual IRI="road_n_en_form"/>
+        <Literal xml:lang="en">road</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="rdf:value"/>
+        <NamedIndividual IRI="road_n_en_sense_ex"/>
+        <Literal xml:lang="en">We live on a quiet road.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="ontolex:writtenRep"/>
+        <NamedIndividual IRI="size_adj_en_form"/>
+        <Literal xml:lang="en">size</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="rdf:value"/>
+        <NamedIndividual IRI="size_adj_en_sense_ex"/>
+        <Literal xml:lang="en">The size of the floor is 80 square feet.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="ontolex:writtenRep"/>
+        <NamedIndividual IRI="valor_adj_es_form"/>
+        <Literal xml:lang="es">valor</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="rdf:value"/>
+        <NamedIndividual IRI="valor_adj_es_sense_ex"/>
+        <Literal xml:lang="es">El valor del inmueble es de 150.000€.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="ontolex:writtenRep"/>
+        <NamedIndividual IRI="value_adj_en_form"/>
+        <Literal>value</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="rdf:value"/>
+        <NamedIndividual IRI="value_adj_en_sense_ex"/>
+        <Literal xml:lang="en">The value of the building is 150.000€.</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasCurrency"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasMaintenancePrice"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPrice"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isOwnedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isPerformedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasCurrency"/>
+        <Class IRI="Price"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasMaintenancePrice"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="schema:Place"/>
+            <Class abbreviatedIRI="schema:Trip"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPrice"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="schema:Place"/>
+            <Class abbreviatedIRI="schema:Trip"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isOwnedBy"/>
+        <Class abbreviatedIRI="schema:Vehicle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isPerformedBy"/>
+        <Class abbreviatedIRI="schema:Trip"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="lives"/>
+        <Class IRI="LifeBeing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasCurrency"/>
+        <Class IRI="Currency"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasMaintenancePrice"/>
+        <Class IRI="Price"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPrice"/>
+        <Class IRI="Price"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isOwnedBy"/>
+        <Class abbreviatedIRI="schema:Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isPerformedBy"/>
+        <Class abbreviatedIRI="schema:Vehicle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="lives"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="capacity"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="currency"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="dateBuilt"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasValue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="height"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="historicalBuildingCatalogue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="inspectionDate"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="length"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="width"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="capacity"/>
+        <Class abbreviatedIRI="schema:Vehicle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="currency"/>
+        <Class IRI="Currency"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="dateBuilt"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="dateDeclaredHistorical"/>
+        <Class abbreviatedIRI="schema:LandmarksOrHistoricalBuildings"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasValue"/>
+        <Class IRI="Price"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="height"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="historicalBuildingCatalogue"/>
+        <Class abbreviatedIRI="schema:LandmarksOrHistoricalBuildings"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="inspectionDate"/>
+        <Class abbreviatedIRI="schema:Vehicle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="isProtected"/>
+        <Class IRI="LifeBeing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="length"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="standingCapacity"/>
+        <Class abbreviatedIRI="schema:Vehicle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="width"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="capacity"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="currency"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="dateBuilt"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="dateDeclaredHistorical"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasValue"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="height"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="historicalBuildingCatalogue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="inspectionDate"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="isProtected"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="length"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="standingCapacity"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="width"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Animal</IRI>
+        <Literal xml:lang="en">Animals are multicellular, eukaryotic organisms in the biological kingdom Animalia.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Animal</IRI>
+        <Literal xml:lang="es">En la clasificación científica de los seres vivos, los animales (Animalia) o metazoos (Metazoa) constituyen un reino que reúne un amplio grupo de organismos que son eucariotas, heterótrofos, pluricelulares y tisulares (excepto los poríferos).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Animal</IRI>
+        <Literal xml:lang="en">Animal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Animal</IRI>
+        <Literal xml:lang="es">Animal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Currency</IRI>
+        <Literal xml:lang="en">A system of money in general use in a particular country.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Currency</IRI>
+        <Literal xml:lang="es">Un sistema de moneda para ser usado en un país.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Currency</IRI>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/price.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Currency</IRI>
+        <Literal xml:lang="en">Currency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Currency</IRI>
+        <Literal xml:lang="es">Moneda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Highway</IRI>
+        <Literal xml:lang="en">A public road, especially an important road that joins cities or towns together.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Highway</IRI>
+        <Literal xml:lang="es">Carretera con calzadas separadas para los dos sentidos de la circulación, cada una de ellas con dos o más carriles, sin cruces a nivel.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Highway</IRI>
+        <Literal xml:lang="es">Autopista</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Highway</IRI>
+        <Literal xml:lang="en">Highway</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LifeBeing</IRI>
+        <Literal xml:lang="en">Life Being living in a particular Place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LifeBeing</IRI>
+        <Literal xml:lang="es">Ser vivo que vive en un determinado lugar.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LifeBeing</IRI>
+        <Literal xml:lang="en">Life Being</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LifeBeing</IRI>
+        <Literal xml:lang="es">Ser Vivo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Plant</IRI>
+        <Literal xml:lang="es">En biología, se denomina plantas a los organismos con células vegetales que poseen paredes celulares y se componen principalmente de celulosa.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Plant</IRI>
+        <Literal xml:lang="en">Plants are the eukaryotes that form the kingdom Plantae; they are predominantly photosynthetic. This means that they obtain their energy from sunlight, using chloroplasts derived from endosymbiosis with cyanobacteria to produce sugars from carbon dioxide and water.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Plant</IRI>
+        <Literal xml:lang="en">Plant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Plant</IRI>
+        <Literal xml:lang="es">Planta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Price</IRI>
+        <Literal xml:lang="es">La cantidad de dinero esperada, requerida o dada en forma de pago por algo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Price</IRI>
+        <Literal xml:lang="en">The amount of money expected, required, or given in payment for something.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Price</IRI>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/price.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Price</IRI>
+        <Literal xml:lang="es">Precio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Price</IRI>
+        <Literal xml:lang="en">Price</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Road</IRI>
+        <Literal xml:lang="en">A long, hard surface built for vehicles to travel along.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Road</IRI>
+        <Literal xml:lang="es">Camino público, ancho y espacioso, pavimentado y dispuesto para el tránsito de vehículos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Road</IRI>
+        <Literal xml:lang="es">Carretera</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Road</IRI>
+        <Literal xml:lang="en">Road</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Street</IRI>
+        <Literal xml:lang="en">A road in a city or town that has buildings that are usually close together along one or both sides.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Street</IRI>
+        <Literal xml:lang="es">Vía pública, habitualmente asfaltada o empedrada, entre edificios o solares.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Street</IRI>
+        <Literal xml:lang="es">Calle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Street</IRI>
+        <Literal xml:lang="en">Street</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>capacity</IRI>
+        <Literal xml:lang="en">Number of people that can be at the same time in a place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>capacity</IRI>
+        <Literal xml:lang="es">Número de personas que puede estar en un lugar al mismo tiempo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>capacity</IRI>
+        <Literal xml:lang="es">capacidad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>capacity</IRI>
+        <Literal xml:lang="en">capacity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>currency</IRI>
+        <Literal xml:lang="es">Relación que determina que una cantidad monetaria está bajo una moneda.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>currency</IRI>
+        <Literal xml:lang="en">Relation that states that a monetary amount is referenced by the currency.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>currency</IRI>
+        <Literal xml:lang="en">currency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>currency</IRI>
+        <Literal xml:lang="es">moneda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dateBuilt</IRI>
+        <Literal xml:lang="en">Date at which the building was built.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dateBuilt</IRI>
+        <Literal xml:lang="es">Fecha en la que una construcción fue realizada.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>dateBuilt</IRI>
+        <Literal xml:lang="en">date built</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>dateBuilt</IRI>
+        <Literal xml:lang="es">fecha de construcción</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dateDeclaredHistorical</IRI>
+        <Literal xml:lang="en">Date at which the historical building was declared as such.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dateDeclaredHistorical</IRI>
+        <Literal xml:lang="es">Fecha en la que el bien histórico comenzó a ser tratado como tal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>dateDeclaredHistorical</IRI>
+        <Literal xml:lang="en">Date of declaration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>dateDeclaredHistorical</IRI>
+        <Literal xml:lang="es">Fecha de declaración</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasCurrency</IRI>
+        <Literal xml:lang="es">El precio usa un sistema monetario.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasCurrency</IRI>
+        <Literal xml:lang="en">The price uses a currency system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasCurrency</IRI>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/price.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasCurrency</IRI>
+        <Literal xml:lang="en">has currency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasCurrency</IRI>
+        <Literal xml:lang="es">tiene moneda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasMaintenancePrice</IRI>
+        <Literal xml:lang="es">El lugar o viaje tiene un coste de mantenimiento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasMaintenancePrice</IRI>
+        <Literal xml:lang="en">The Place or trip has a maintenance rate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasMaintenancePrice</IRI>
+        <Literal xml:lang="en">has maintenance price</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasMaintenancePrice</IRI>
+        <Literal xml:lang="es">tiene precio de mantenimiento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPrice</IRI>
+        <Literal xml:lang="es">El lugar o viaje tiene un coste de acceso.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPrice</IRI>
+        <Literal xml:lang="en">The Place or trip has an access rate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasPrice</IRI>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/price.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPrice</IRI>
+        <Literal xml:lang="en">has access price</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPrice</IRI>
+        <Literal xml:lang="es">tiene precio de acceso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasValue</IRI>
+        <Literal xml:lang="es">Relación que indica que el sujeto tiene el valor de un objeto.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasValue</IRI>
+        <Literal xml:lang="en">Relation that states that something has a value of an object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasValue</IRI>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/price.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasValue</IRI>
+        <Literal xml:lang="en">has value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasValue</IRI>
+        <Literal xml:lang="es">tiene valor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>height</IRI>
+        <Literal xml:lang="es">Distancia de arriba a abajo de algo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>height</IRI>
+        <Literal xml:lang="en">The distance from the top to the bottom of something.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>height</IRI>
+        <Literal xml:lang="es">altura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>height</IRI>
+        <Literal xml:lang="en">height</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>historicalBuildingCatalogue</IRI>
+        <Literal xml:lang="es">Tipo según la ley 16/1985</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>historicalBuildingCatalogue</IRI>
+        <Literal xml:lang="en">Type of historical building according to the law 16/1985</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>historicalBuildingCatalogue</IRI>
+        <Literal xml:lang="es">Tipo de Edificio histórico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>historicalBuildingCatalogue</IRI>
+        <Literal xml:lang="en">Type of historical building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>inspectionDate</IRI>
+        <Literal xml:lang="en">Date at which an inspection takes place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>inspectionDate</IRI>
+        <Literal xml:lang="es">Fecha en la que ocurre una inspección.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>inspectionDate</IRI>
+        <Literal xml:lang="es">fecha de inspección</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>inspectionDate</IRI>
+        <Literal xml:lang="en">inspection date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isOwnedBy</IRI>
+        <Literal xml:lang="es">El vehículo es propiedad de una organización.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isOwnedBy</IRI>
+        <Literal xml:lang="en">The vehicle is property of an organization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isOwnedBy</IRI>
+        <Literal xml:lang="es">es propiedad de</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isOwnedBy</IRI>
+        <Literal xml:lang="en">is owned by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isPerformedBy</IRI>
+        <Literal xml:lang="es">El viaje es realizado por el vehículo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isPerformedBy</IRI>
+        <Literal xml:lang="en">The trip is performed by the vehicle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isPerformedBy</IRI>
+        <Literal xml:lang="es">es realizado por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isPerformedBy</IRI>
+        <Literal xml:lang="en">is performed by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isProtected</IRI>
+        <Literal xml:lang="es">Indica si el ser vivo está en peligro de extinción o no.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isProtected</IRI>
+        <Literal xml:lang="en">Indicates whether the Life Being is in risk of extinction or not.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isProtected</IRI>
+        <Literal xml:lang="es">Peligro de extinción</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isProtected</IRI>
+        <Literal xml:lang="en">Risk of extinction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>length</IRI>
+        <Literal xml:lang="es">Magnitud física que expresa la distancia entre dos puntos, y cuya unidad en el sistema internacional es el metro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>length</IRI>
+        <Literal xml:lang="en">The measurement of something from end to end or along its longest side.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>length</IRI>
+        <Literal xml:lang="en">length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>length</IRI>
+        <Literal xml:lang="es">longitud</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>lives</IRI>
+        <Literal xml:lang="es">Indica dónde vive el ser vivo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>lives</IRI>
+        <Literal xml:lang="en">Indicates where the Life Being lives.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>lives</IRI>
+        <Literal xml:lang="en">lives in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>lives</IRI>
+        <Literal xml:lang="es">vive en</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>organization_n_en_sense_concept</IRI>
+        <Literal xml:lang="en">A group of people who work together in an organized way for a shared purpose.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>road_n_en_sense_concept</IRI>
+        <Literal xml:lang="en">A long, hard surface built for vehicles to travel along.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>size_adj_en_sense_concept</IRI>
+        <Literal xml:lang="en">How large or small something or someone is.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>standingCapacity</IRI>
+        <Literal xml:lang="en">Number of passengers that can travel standing in the vehicle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>standingCapacity</IRI>
+        <Literal xml:lang="es">Número de pasajeros que pueden ir de pie en el vehículo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>standingCapacity</IRI>
+        <Literal xml:lang="en">Number of standing passengers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>standingCapacity</IRI>
+        <Literal xml:lang="es">Número de pasajeros de pie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>value_adj_en_sense_concept</IRI>
+        <Literal xml:lang="en">The amount of money that can be received for something.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>width</IRI>
+        <Literal xml:lang="es">Distancia a través de algo de un lado a otro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>width</IRI>
+        <Literal xml:lang="en">The distance across something from one side to the other.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>width</IRI>
+        <Literal xml:lang="es">ancho</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>width</IRI>
+        <Literal xml:lang="en">width</Literal>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI="cc:license"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </SubAnnotationPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

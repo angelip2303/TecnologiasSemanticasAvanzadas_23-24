@@ -1,0 +1,955 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.urbanont.com/ontology/urban#"
+     xml:base="http://www.urbanont.com/ontology/urban"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:dcr="http://www.isocat.org/ns/dcr.rdf#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:lime="http://www.w3.org/ns/lemon/lime#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/"
+     xmlns:lexicog="http://www.w3.org/ns/lemon/lexicog#"
+     xmlns:lexinfo="http://www.lexinfo.net/ontology/2.0/lexinfo#"
+     xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#"
+     xmlns:elements="http://purl.org/dc/elements/1.1/#"
+     xmlns:vartrans="http://www.w3.org/ns/lemon/vartrans#">
+    <owl:Ontology rdf:about="http://www.urbanont.com/ontology/urban#">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <owl:imports rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/lemon/lexicog"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/lemon/lime"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/lemon/ontolex"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/lemon/vartrans"/>
+        <owl:imports rdf:resource="https://schema.org/"/>
+        <cc:license>This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA</cc:license>
+        <rdfs:comment xml:lang="es">Ontología de urbanismo para la gestión y planificación de elementos relacionados con la urbe.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The urbanism ontology for improving the management and planning of urban related stuff.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ontology about urban planning</rdfs:label>
+        <rdfs:label xml:lang="es">Ontología sobre planificación urbana</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#hasCurrency -->
+
+    <owl:ObjectProperty rdf:about="http://www.urbanont.com/ontology/urban#hasCurrency">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.urbanont.com/ontology/urban#Price"/>
+        <rdfs:range rdf:resource="http://www.urbanont.com/ontology/urban#Currency"/>
+        <rdfs:comment xml:lang="es">El precio usa un sistema monetario.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The price uses a currency system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/price.owl"/>
+        <rdfs:label xml:lang="en">has currency</rdfs:label>
+        <rdfs:label xml:lang="es">tiene moneda</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#hasMaintenancePrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.urbanont.com/ontology/urban#hasMaintenancePrice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://schema.org/Place"/>
+                    <rdf:Description rdf:about="https://schema.org/Trip"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.urbanont.com/ontology/urban#Price"/>
+        <rdfs:comment xml:lang="es">El lugar o viaje tiene un coste de mantenimiento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Place or trip has a maintenance rate.</rdfs:comment>
+        <rdfs:label xml:lang="en">has maintenance price</rdfs:label>
+        <rdfs:label xml:lang="es">tiene precio de mantenimiento</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#hasPrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.urbanont.com/ontology/urban#hasPrice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://schema.org/Place"/>
+                    <rdf:Description rdf:about="https://schema.org/Trip"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.urbanont.com/ontology/urban#Price"/>
+        <rdfs:comment xml:lang="es">El lugar o viaje tiene un coste de acceso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Place or trip has an access rate.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/price.owl"/>
+        <rdfs:label xml:lang="en">has access price</rdfs:label>
+        <rdfs:label xml:lang="es">tiene precio de acceso</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#isOwnedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.urbanont.com/ontology/urban#isOwnedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Vehicle"/>
+        <rdfs:range rdf:resource="https://schema.org/Organization"/>
+        <rdfs:comment xml:lang="es">El vehículo es propiedad de una organización.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The vehicle is property of an organization.</rdfs:comment>
+        <rdfs:label xml:lang="es">es propiedad de</rdfs:label>
+        <rdfs:label xml:lang="en">is owned by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#isPerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.urbanont.com/ontology/urban#isPerformedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Trip"/>
+        <rdfs:range rdf:resource="https://schema.org/Vehicle"/>
+        <rdfs:comment xml:lang="es">El viaje es realizado por el vehículo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The trip is performed by the vehicle.</rdfs:comment>
+        <rdfs:label xml:lang="es">es realizado por</rdfs:label>
+        <rdfs:label xml:lang="en">is performed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#lives -->
+
+    <owl:ObjectProperty rdf:about="http://www.urbanont.com/ontology/urban#lives">
+        <rdfs:domain rdf:resource="http://www.urbanont.com/ontology/urban#LifeBeing"/>
+        <rdfs:range rdf:resource="https://schema.org/Place"/>
+        <rdfs:comment xml:lang="es">Indica dónde vive el ser vivo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates where the Life Being lives.</rdfs:comment>
+        <rdfs:label xml:lang="en">lives in</rdfs:label>
+        <rdfs:label xml:lang="es">vive en</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#capacity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Number of people that can be at the same time in a place.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número de personas que puede estar en un lugar al mismo tiempo.</rdfs:comment>
+        <rdfs:label xml:lang="es">capacidad</rdfs:label>
+        <rdfs:label xml:lang="en">capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#currency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#currency">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.urbanont.com/ontology/urban#Currency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Relación que determina que una cantidad monetaria está bajo una moneda.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relation that states that a monetary amount is referenced by the currency.</rdfs:comment>
+        <rdfs:label xml:lang="en">currency</rdfs:label>
+        <rdfs:label xml:lang="es">moneda</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#dateBuilt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#dateBuilt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date at which the building was built.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Fecha en la que una construcción fue realizada.</rdfs:comment>
+        <rdfs:label xml:lang="en">date built</rdfs:label>
+        <rdfs:label xml:lang="es">fecha de construcción</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#dateDeclaredHistorical -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#dateDeclaredHistorical">
+        <rdfs:domain rdf:resource="https://schema.org/LandmarksOrHistoricalBuildings"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date at which the historical building was declared as such.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Fecha en la que el bien histórico comenzó a ser tratado como tal.</rdfs:comment>
+        <rdfs:label xml:lang="en">Date of declaration</rdfs:label>
+        <rdfs:label xml:lang="es">Fecha de declaración</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#hasValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.urbanont.com/ontology/urban#Price"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Relación que indica que el sujeto tiene el valor de un objeto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relation that states that something has a value of an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/price.owl"/>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+        <rdfs:label xml:lang="es">tiene valor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#height -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#height">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="es">Distancia de arriba a abajo de algo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The distance from the top to the bottom of something.</rdfs:comment>
+        <rdfs:label xml:lang="es">altura</rdfs:label>
+        <rdfs:label xml:lang="en">height</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#historicalBuildingCatalogue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#historicalBuildingCatalogue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/LandmarksOrHistoricalBuildings"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Tipo según la ley 16/1985</rdfs:comment>
+        <rdfs:comment xml:lang="en">Type of historical building according to the law 16/1985</rdfs:comment>
+        <rdfs:label xml:lang="es">Tipo de Edificio histórico</rdfs:label>
+        <rdfs:label xml:lang="en">Type of historical building</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#inspectionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#inspectionDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date at which an inspection takes place.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Fecha en la que ocurre una inspección.</rdfs:comment>
+        <rdfs:label xml:lang="es">fecha de inspección</rdfs:label>
+        <rdfs:label xml:lang="en">inspection date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#isProtected -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#isProtected">
+        <rdfs:domain rdf:resource="http://www.urbanont.com/ontology/urban#LifeBeing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="es">Indica si el ser vivo está en peligro de extinción o no.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates whether the Life Being is in risk of extinction or not.</rdfs:comment>
+        <rdfs:label xml:lang="es">Peligro de extinción</rdfs:label>
+        <rdfs:label xml:lang="en">Risk of extinction</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#length -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#length">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="es">Magnitud física que expresa la distancia entre dos puntos, y cuya unidad en el sistema internacional es el metro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The measurement of something from end to end or along its longest side.</rdfs:comment>
+        <rdfs:label xml:lang="en">length</rdfs:label>
+        <rdfs:label xml:lang="es">longitud</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#standingCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#standingCapacity">
+        <rdfs:domain rdf:resource="https://schema.org/Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Number of passengers that can travel standing in the vehicle.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número de pasajeros que pueden ir de pie en el vehículo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Number of standing passengers</rdfs:label>
+        <rdfs:label xml:lang="es">Número de pasajeros de pie</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#width -->
+
+    <owl:DatatypeProperty rdf:about="http://www.urbanont.com/ontology/urban#width">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="es">Distancia a través de algo de un lado a otro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The distance across something from one side to the other.</rdfs:comment>
+        <rdfs:label xml:lang="es">ancho</rdfs:label>
+        <rdfs:label xml:lang="en">width</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#Animal -->
+
+    <owl:Class rdf:about="http://www.urbanont.com/ontology/urban#Animal">
+        <rdfs:subClassOf rdf:resource="http://www.urbanont.com/ontology/urban#LifeBeing"/>
+        <owl:disjointWith rdf:resource="http://www.urbanont.com/ontology/urban#Plant"/>
+        <rdfs:comment xml:lang="en">Animals are multicellular, eukaryotic organisms in the biological kingdom Animalia.</rdfs:comment>
+        <rdfs:comment xml:lang="es">En la clasificación científica de los seres vivos, los animales (Animalia) o metazoos (Metazoa) constituyen un reino que reúne un amplio grupo de organismos que son eucariotas, heterótrofos, pluricelulares y tisulares (excepto los poríferos).</rdfs:comment>
+        <rdfs:label xml:lang="en">Animal</rdfs:label>
+        <rdfs:label xml:lang="es">Animal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#Currency -->
+
+    <owl:Class rdf:about="http://www.urbanont.com/ontology/urban#Currency">
+        <owl:disjointWith rdf:resource="http://www.urbanont.com/ontology/urban#Price"/>
+        <rdfs:comment xml:lang="en">A system of money in general use in a particular country.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un sistema de moneda para ser usado en un país.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/price.owl"/>
+        <rdfs:label xml:lang="en">Currency</rdfs:label>
+        <rdfs:label xml:lang="es">Moneda</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#Highway -->
+
+    <owl:Class rdf:about="http://www.urbanont.com/ontology/urban#Highway">
+        <rdfs:subClassOf rdf:resource="http://www.urbanont.com/ontology/urban#Road"/>
+        <owl:disjointWith rdf:resource="http://www.urbanont.com/ontology/urban#Street"/>
+        <rdfs:comment xml:lang="en">A public road, especially an important road that joins cities or towns together.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Carretera con calzadas separadas para los dos sentidos de la circulación, cada una de ellas con dos o más carriles, sin cruces a nivel.</rdfs:comment>
+        <rdfs:label xml:lang="es">Autopista</rdfs:label>
+        <rdfs:label xml:lang="en">Highway</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#LifeBeing -->
+
+    <owl:Class rdf:about="http://www.urbanont.com/ontology/urban#LifeBeing">
+        <rdfs:comment xml:lang="en">Life Being living in a particular Place.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Ser vivo que vive en un determinado lugar.</rdfs:comment>
+        <rdfs:label xml:lang="en">Life Being</rdfs:label>
+        <rdfs:label xml:lang="es">Ser Vivo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#Plant -->
+
+    <owl:Class rdf:about="http://www.urbanont.com/ontology/urban#Plant">
+        <rdfs:subClassOf rdf:resource="http://www.urbanont.com/ontology/urban#LifeBeing"/>
+        <rdfs:comment xml:lang="es">En biología, se denomina plantas a los organismos con células vegetales que poseen paredes celulares y se componen principalmente de celulosa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Plants are the eukaryotes that form the kingdom Plantae; they are predominantly photosynthetic. This means that they obtain their energy from sunlight, using chloroplasts derived from endosymbiosis with cyanobacteria to produce sugars from carbon dioxide and water.</rdfs:comment>
+        <rdfs:label xml:lang="en">Plant</rdfs:label>
+        <rdfs:label xml:lang="es">Planta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#Price -->
+
+    <owl:Class rdf:about="http://www.urbanont.com/ontology/urban#Price">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.urbanont.com/ontology/urban#hasCurrency"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.urbanont.com/ontology/urban#hasValue"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">La cantidad de dinero esperada, requerida o dada en forma de pago por algo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The amount of money expected, required, or given in payment for something.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/price.owl"/>
+        <rdfs:label xml:lang="es">Precio</rdfs:label>
+        <rdfs:label xml:lang="en">Price</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#Road -->
+
+    <owl:Class rdf:about="http://www.urbanont.com/ontology/urban#Road">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+        <rdfs:comment xml:lang="en">A long, hard surface built for vehicles to travel along.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Camino público, ancho y espacioso, pavimentado y dispuesto para el tránsito de vehículos.</rdfs:comment>
+        <rdfs:label xml:lang="es">Carretera</rdfs:label>
+        <rdfs:label xml:lang="en">Road</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#Street -->
+
+    <owl:Class rdf:about="http://www.urbanont.com/ontology/urban#Street">
+        <rdfs:subClassOf rdf:resource="http://www.urbanont.com/ontology/urban#Road"/>
+        <rdfs:comment xml:lang="en">A road in a city or town that has buildings that are usually close together along one or both sides.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Vía pública, habitualmente asfaltada o empedrada, entre edificios o solares.</rdfs:comment>
+        <rdfs:label xml:lang="es">Calle</rdfs:label>
+        <rdfs:label xml:lang="en">Street</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/LocalBusiness -->
+
+    <rdf:Description rdf:about="https://schema.org/LocalBusiness">
+        <owl:disjointWith rdf:resource="https://schema.org/SportsOrganization"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#carretera_n_es -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#carretera_n_es">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <lexinfo:partOfSpeech rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"/>
+        <ontolex:lexicalForm rdf:resource="http://www.urbanont.com/ontology/urban#carretera_n_es_form"/>
+        <ontolex:sense rdf:resource="http://www.urbanont.com/ontology/urban#carretera_n_es_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#carretera_n_es_form -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#carretera_n_es_form">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#Form"/>
+        <ontolex:writtenRep xml:lang="es">carretera</ontolex:writtenRep>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#carretera_n_es_sense -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#carretera_n_es_sense">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <lexicog:usageExample rdf:resource="http://www.urbanont.com/ontology/urban#carretera_n_es_sense_ex"/>
+        <ontolex:isLexicalizedSenseOf rdf:resource="http://www.urbanont.com/ontology/urban#road_n_en_sense_concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#carretera_n_es_sense_ex -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#carretera_n_es_sense_ex">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/lexicog#UsageExample"/>
+        <rdf:value xml:lang="es">Vivimos al lado de una carretera tranquila.</rdf:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#dimensiones_adj_es -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#dimensiones_adj_es">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <lexinfo:partOfSpeech rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"/>
+        <ontolex:lexicalForm rdf:resource="http://www.urbanont.com/ontology/urban#dimensiones_adj_es_form"/>
+        <ontolex:sense rdf:resource="http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#dimensiones_adj_es_form -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#dimensiones_adj_es_form">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#Form"/>
+        <ontolex:writtenRep xml:lang="es">dimensiones</ontolex:writtenRep>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <lexicog:usageExample rdf:resource="http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense_ex"/>
+        <ontolex:isLexicalizedSenseOf rdf:resource="http://www.urbanont.com/ontology/urban#size_adj_en_sense_concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense_ex -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense_ex">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/lexicog#UsageExample"/>
+        <rdf:value xml:lang="es">Las dimensiones del piso son de 80 metros cuadrados.</rdf:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#en_lexicon -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#en_lexicon">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/lime#Lexicon"/>
+        <lime:entry rdf:resource="http://www.urbanont.com/ontology/urban#organization_n_en"/>
+        <lime:entry rdf:resource="http://www.urbanont.com/ontology/urban#road_n_en"/>
+        <lime:entry rdf:resource="http://www.urbanont.com/ontology/urban#size_adj_en"/>
+        <lime:entry rdf:resource="http://www.urbanont.com/ontology/urban#value_adj_en"/>
+        <dc:language>en</dc:language>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#es_lexicon -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#es_lexicon">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/lime#Lexicon"/>
+        <lime:entry rdf:resource="http://www.urbanont.com/ontology/urban#carretera_n_es"/>
+        <lime:entry rdf:resource="http://www.urbanont.com/ontology/urban#dimensiones_adj_es"/>
+        <lime:entry rdf:resource="http://www.urbanont.com/ontology/urban#organizacion_n_es"/>
+        <lime:entry rdf:resource="http://www.urbanont.com/ontology/urban#valor_adj_es"/>
+        <dc:language>es</dc:language>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#organizacion_n_es -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#organizacion_n_es">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <lexinfo:partOfSpeech rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#noun"/>
+        <ontolex:lexicalForm rdf:resource="http://www.urbanont.com/ontology/urban#organizacion_n_es_form"/>
+        <ontolex:sense rdf:resource="http://www.urbanont.com/ontology/urban#organizacion_n_es_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#organizacion_n_es_form -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#organizacion_n_es_form">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#Form"/>
+        <ontolex:writtenRep xml:lang="es">organización</ontolex:writtenRep>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#organizacion_n_es_sense -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#organizacion_n_es_sense">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <lexicog:usageExample rdf:resource="http://www.urbanont.com/ontology/urban#organizacion_n_es_sense_ex"/>
+        <ontolex:isLexicalizedSenseOf rdf:resource="http://www.urbanont.com/ontology/urban#organization_n_en_sense_concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#organizacion_n_es_sense_ex -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#organizacion_n_es_sense_ex">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/lexicog#UsageExample"/>
+        <rdf:value xml:lang="es">Me voy a apuntar a una Organización sin ánimo de lucro.</rdf:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#organization_n_en -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#organization_n_en">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <lexinfo:partOfSpeech rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#noun"/>
+        <ontolex:lexicalForm rdf:resource="http://www.urbanont.com/ontology/urban#organization_n_en_form"/>
+        <ontolex:sense rdf:resource="http://www.urbanont.com/ontology/urban#organization_n_en_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#organization_n_en_form -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#organization_n_en_form">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#Form"/>
+        <ontolex:writtenRep xml:lang="en">organization</ontolex:writtenRep>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#organization_n_en_sense -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#organization_n_en_sense">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <lexicog:usageExample rdf:resource="http://www.urbanont.com/ontology/urban#organization_n_en_sense_ex"/>
+        <ontolex:isLexicalizedSenseOf rdf:resource="http://www.urbanont.com/ontology/urban#organization_n_en_sense_concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#organization_n_en_sense_concept -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#organization_n_en_sense_concept">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalConcept"/>
+        <skos:definition xml:lang="en">A group of people who work together in an organized way for a shared purpose.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#organization_n_en_sense_ex -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#organization_n_en_sense_ex">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/lexicog#UsageExample"/>
+        <rdf:value xml:lang="en">The article was about international aid organizations.</rdf:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#organization_n_sense-organizacion_n_es_sense-tr -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#organization_n_sense-organizacion_n_es_sense-tr">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/vartrans#Translation"/>
+        <vartrans:source rdf:resource="http://www.urbanont.com/ontology/urban#organization_n_en_sense"/>
+        <schema:target rdf:resource="http://www.urbanont.com/ontology/urban#organizacion_n_es_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#road_n_en -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#road_n_en">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <lexinfo:partOfSpeech rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#noun"/>
+        <ontolex:lexicalForm rdf:resource="http://www.urbanont.com/ontology/urban#road_n_en_form"/>
+        <ontolex:sense rdf:resource="http://www.urbanont.com/ontology/urban#road_n_en_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#road_n_en_form -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#road_n_en_form">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#Form"/>
+        <ontolex:writtenRep xml:lang="en">road</ontolex:writtenRep>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#road_n_en_sense -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#road_n_en_sense">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <lexicog:usageExample rdf:resource="http://www.urbanont.com/ontology/urban#road_n_en_sense_ex"/>
+        <ontolex:isLexicalizedSenseOf rdf:resource="http://www.urbanont.com/ontology/urban#road_n_en_sense_concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#road_n_en_sense-carretera_n_es_sense-tr -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#road_n_en_sense-carretera_n_es_sense-tr">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/vartrans#Translation"/>
+        <vartrans:source rdf:resource="http://www.urbanont.com/ontology/urban#road_n_en_sense"/>
+        <schema:target rdf:resource="http://www.urbanont.com/ontology/urban#carretera_n_es_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#road_n_en_sense_concept -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#road_n_en_sense_concept">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalConcept"/>
+        <skos:definition xml:lang="en">A long, hard surface built for vehicles to travel along.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#road_n_en_sense_ex -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#road_n_en_sense_ex">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/lexicog#UsageExample"/>
+        <rdf:value xml:lang="en">We live on a quiet road.</rdf:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#size_adj_en -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#size_adj_en">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <lexinfo:partOfSpeech rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"/>
+        <ontolex:lexicalForm rdf:resource="http://www.urbanont.com/ontology/urban#size_adj_en_form"/>
+        <ontolex:sense rdf:resource="http://www.urbanont.com/ontology/urban#size_adj_en_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#size_adj_en_form -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#size_adj_en_form">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#Form"/>
+        <ontolex:writtenRep xml:lang="en">size</ontolex:writtenRep>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#size_adj_en_sense -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#size_adj_en_sense">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <lexicog:usageExample rdf:resource="http://www.urbanont.com/ontology/urban#size_adj_en_sense_ex"/>
+        <ontolex:isLexicalizedSenseOf rdf:resource="http://www.urbanont.com/ontology/urban#size_adj_en_sense_concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#size_adj_en_sense-dimensiones_adj_es_sense-tr -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#size_adj_en_sense-dimensiones_adj_es_sense-tr">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/vartrans#Translation"/>
+        <vartrans:source rdf:resource="http://www.urbanont.com/ontology/urban#size_adj_en_sense"/>
+        <schema:target rdf:resource="http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#size_adj_en_sense_concept -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#size_adj_en_sense_concept">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalConcept"/>
+        <skos:definition xml:lang="en">How large or small something or someone is.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#size_adj_en_sense_ex -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#size_adj_en_sense_ex">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/lexicog#UsageExample"/>
+        <rdf:value xml:lang="en">The size of the floor is 80 square feet.</rdf:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#valor_adj_es -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#valor_adj_es">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <lexinfo:partOfSpeech rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"/>
+        <ontolex:lexicalForm rdf:resource="http://www.urbanont.com/ontology/urban#valor_adj_es_form"/>
+        <ontolex:sense rdf:resource="http://www.urbanont.com/ontology/urban#valor_adj_es_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#valor_adj_es_form -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#valor_adj_es_form">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#Form"/>
+        <ontolex:writtenRep xml:lang="es">valor</ontolex:writtenRep>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#valor_adj_es_sense -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#valor_adj_es_sense">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <lexicog:usageExample rdf:resource="http://www.urbanont.com/ontology/urban#valor_adj_es_sense_ex"/>
+        <ontolex:isLexicalizedSenseOf rdf:resource="http://www.urbanont.com/ontology/urban#value_adj_en_sense_concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#valor_adj_es_sense_ex -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#valor_adj_es_sense_ex">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/lexicog#UsageExample"/>
+        <rdf:value xml:lang="es">El valor del inmueble es de 150.000€.</rdf:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#value_adj_en -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#value_adj_en">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <lexinfo:partOfSpeech rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#adjective"/>
+        <ontolex:lexicalForm rdf:resource="http://www.urbanont.com/ontology/urban#value_adj_en_form"/>
+        <ontolex:sense rdf:resource="http://www.urbanont.com/ontology/urban#value_adj_en_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#value_adj_en_form -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#value_adj_en_form">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#Form"/>
+        <ontolex:writtenRep>value</ontolex:writtenRep>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#value_adj_en_sense -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#value_adj_en_sense">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <lexicog:usageExample rdf:resource="http://www.urbanont.com/ontology/urban#value_adj_en_sense_ex"/>
+        <ontolex:isLexicalizedSenseOf rdf:resource="http://www.urbanont.com/ontology/urban#value_adj_en_sense_concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#value_adj_en_sense-valor_adj_es_sense-tr -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#value_adj_en_sense-valor_adj_es_sense-tr">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/vartrans#Translation"/>
+        <vartrans:source rdf:resource="http://www.urbanont.com/ontology/urban#value_adj_en_sense"/>
+        <schema:target rdf:resource="http://www.urbanont.com/ontology/urban#valor_adj_es_sense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#value_adj_en_sense_concept -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#value_adj_en_sense_concept">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalConcept"/>
+        <skos:definition xml:lang="en">The amount of money that can be received for something.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.urbanont.com/ontology/urban#value_adj_en_sense_ex -->
+
+    <owl:NamedIndividual rdf:about="http://www.urbanont.com/ontology/urban#value_adj_en_sense_ex">
+        <rdf:type rdf:resource="http://www.w3.org/ns/lemon/lexicog#UsageExample"/>
+        <rdf:value xml:lang="en">The value of the building is 150.000€.</rdf:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.urbanont.com/ontology/urban#Road"/>
+            <rdf:Description rdf:about="https://schema.org/Landform"/>
+            <rdf:Description rdf:about="https://schema.org/LandmarksOrHistoricalBuildings"/>
+            <rdf:Description rdf:about="https://schema.org/SportsActivityLocation"/>
+            <rdf:Description rdf:about="https://schema.org/TouristAttraction"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://schema.org/BusOrCoach"/>
+            <rdf:Description rdf:about="https://schema.org/Car"/>
+            <rdf:Description rdf:about="https://schema.org/Motorcycle"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

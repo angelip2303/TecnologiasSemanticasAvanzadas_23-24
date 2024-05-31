@@ -1,0 +1,848 @@
+@prefix : <http://www.urbanont.com/ontology/urban#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.urbanont.com/ontology/urban#> .
+
+<http://www.urbanont.com/ontology/urban#> rdf:type owl:Ontology ;
+                                           owl:imports <http://www.lexinfo.net/ontology/2.0/lexinfo> ,
+                                                       <http://www.w3.org/ns/lemon/lexicog> ,
+                                                       <http://www.w3.org/ns/lemon/lime> ,
+                                                       <http://www.w3.org/ns/lemon/ontolex> ,
+                                                       <http://www.w3.org/ns/lemon/vartrans> ,
+                                                       <https://schema.org/> ;
+                                           <http://creativecommons.org/ns#license> "This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA" ;
+                                           rdfs:comment "Ontología de urbanismo para la gestión y planificación de elementos relacionados con la urbe."@es ,
+                                                        "The urbanism ontology for improving the management and planning of urban related stuff."@en ;
+                                           rdfs:label "Ontology about urban planning"@en ,
+                                                      "Ontología sobre planificación urbana"@es .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty ;
+                                        rdfs:subPropertyOf rdfs:comment .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/target
+<https://schema.org/target> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.urbanont.com/ontology/urban#hasCurrency
+:hasCurrency rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Price ;
+             rdfs:range :Currency ;
+             rdfs:comment "El precio usa un sistema monetario."@es ,
+                          "The price uses a currency system."@en ;
+             rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/price.owl> ;
+             rdfs:label "has currency"@en ,
+                        "tiene moneda"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#hasMaintenancePrice
+:hasMaintenancePrice rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( <https://schema.org/Place>
+                                                 <https://schema.org/Trip>
+                                               )
+                                 ] ;
+                     rdfs:range :Price ;
+                     rdfs:comment "El lugar o viaje tiene un coste de mantenimiento."@es ,
+                                  "The Place or trip has a maintenance rate."@en ;
+                     rdfs:label "has maintenance price"@en ,
+                                "tiene precio de mantenimiento"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#hasPrice
+:hasPrice rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( <https://schema.org/Place>
+                                      <https://schema.org/Trip>
+                                    )
+                      ] ;
+          rdfs:range :Price ;
+          rdfs:comment "El lugar o viaje tiene un coste de acceso."@es ,
+                       "The Place or trip has an access rate."@en ;
+          rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/price.owl> ;
+          rdfs:label "has access price"@en ,
+                     "tiene precio de acceso"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#isOwnedBy
+:isOwnedBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain <https://schema.org/Vehicle> ;
+           rdfs:range <https://schema.org/Organization> ;
+           rdfs:comment "El vehículo es propiedad de una organización."@es ,
+                        "The vehicle is property of an organization."@en ;
+           rdfs:label "es propiedad de"@es ,
+                      "is owned by"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#isPerformedBy
+:isPerformedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain <https://schema.org/Trip> .
+
+
+###  http://www.urbanont.com/ontology/urban#lives
+:lives rdf:type owl:ObjectProperty ;
+       rdfs:domain :LifeBeing ;
+       rdfs:range <https://schema.org/Place> ;
+       rdfs:comment "Indica dónde vive el ser vivo."@es ,
+                    "Indicates where the Life Being lives."@en ;
+       rdfs:label "lives in"@en ,
+                  "vive en"@es .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/language
+<http://purl.org/dc/elements/1.1/language> <http://purl.org/dc/terms/description> "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag."@en ;
+                                           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                           rdfs:comment "A language of the resource."@en ;
+                                           rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                           rdfs:label "Language"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+###  http://www.urbanont.com/ontology/urban#capacity
+:capacity rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain <https://schema.org/Vehicle> ;
+          rdfs:range xsd:int ;
+          rdfs:comment "Number of people that can be at the same time in a place."@en ,
+                       "Número de personas que puede estar en un lugar al mismo tiempo."@es ;
+          rdfs:label "capacidad"@es ,
+                     "capacity"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#currency
+:currency rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Currency ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Relación que determina que una cantidad monetaria está bajo una moneda."@es ,
+                       "Relation that states that a monetary amount is referenced by the currency."@en ;
+          rdfs:label "currency"@en ,
+                     "moneda"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#dateBuilt
+:dateBuilt rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain <https://schema.org/Place> ;
+           rdfs:range xsd:date ;
+           rdfs:comment "Date at which the building was built."@en ,
+                        "Fecha en la que una construcción fue realizada."@es ;
+           rdfs:label "date built"@en ,
+                      "fecha de construcción"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#dateDeclaredHistorical
+:dateDeclaredHistorical rdf:type owl:DatatypeProperty ;
+                        rdfs:domain <https://schema.org/LandmarksOrHistoricalBuildings> ;
+                        rdfs:range xsd:date ;
+                        rdfs:comment "Date at which the historical building was declared as such."@en ,
+                                     "Fecha en la que el bien histórico comenzó a ser tratado como tal."@es ;
+                        rdfs:label "Date of declaration"@en ,
+                                   "Fecha de declaración"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Price ;
+          rdfs:range xsd:int ;
+          rdfs:comment "Relación que indica que el sujeto tiene el valor de un objeto."@es ,
+                       "Relation that states that something has a value of an object."@en ;
+          rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/price.owl> ;
+          rdfs:label "has value"@en ,
+                     "tiene valor"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#height
+:height rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain <https://schema.org/Place> ;
+        rdfs:range xsd:float ;
+        rdfs:comment "Distancia de arriba a abajo de algo."@es ,
+                     "The distance from the top to the bottom of something."@en ;
+        rdfs:label "altura"@es ,
+                   "height"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#historicalBuildingCatalogue
+:historicalBuildingCatalogue rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf owl:topDataProperty ;
+                             rdfs:domain <https://schema.org/LandmarksOrHistoricalBuildings> ;
+                             rdfs:range xsd:string ;
+                             rdfs:comment "Tipo según la ley 16/1985"@es ,
+                                          "Type of historical building according to the law 16/1985"@en ;
+                             rdfs:label "Tipo de Edificio histórico"@es ,
+                                        "Type of historical building"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#inspectionDate
+:inspectionDate rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain <https://schema.org/Vehicle> ;
+                rdfs:range xsd:date ;
+                rdfs:comment "Date at which an inspection takes place."@en ,
+                             "Fecha en la que ocurre una inspección."@es ;
+                rdfs:label "fecha de inspección"@es ,
+                           "inspection date"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#isPerformedBy
+:isPerformedBy rdf:type owl:DatatypeProperty ;
+               rdfs:range <https://schema.org/Vehicle> .
+
+
+###  http://www.urbanont.com/ontology/urban#isProtected
+:isProtected rdf:type owl:DatatypeProperty ;
+             rdfs:domain :LifeBeing ;
+             rdfs:range xsd:boolean ;
+             rdfs:comment "Indica si el ser vivo está en peligro de extinción o no."@es ,
+                          "Indicates whether the Life Being is in risk of extinction or not."@en ;
+             rdfs:label "Peligro de extinción"@es ,
+                        "Risk of extinction"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#length
+:length rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain <https://schema.org/Place> ;
+        rdfs:range xsd:float ;
+        rdfs:comment "Magnitud física que expresa la distancia entre dos puntos, y cuya unidad en el sistema internacional es el metro."@es ,
+                     "The measurement of something from end to end or along its longest side."@en ;
+        rdfs:label "length"@en ,
+                   "longitud"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#standingCapacity
+:standingCapacity rdf:type owl:DatatypeProperty ;
+                  rdfs:domain <https://schema.org/Vehicle> ;
+                  rdfs:range xsd:int ;
+                  rdfs:comment "Number of passengers that can travel standing in the vehicle."@en ,
+                               "Número de pasajeros que pueden ir de pie en el vehículo."@es ;
+                  rdfs:label "Number of standing passengers"@en ,
+                             "Número de pasajeros de pie"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#width
+:width rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain <https://schema.org/Place> ;
+       rdfs:range xsd:float ;
+       rdfs:comment "Distancia a través de algo de un lado a otro."@es ,
+                    "The distance across something from one side to the other."@en ;
+       rdfs:label "ancho"@es ,
+                  "width"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.urbanont.com/ontology/urban#Animal
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf :LifeBeing ;
+        owl:disjointWith :Plant ;
+        rdfs:comment "Animals are multicellular, eukaryotic organisms in the biological kingdom Animalia."@en ,
+                     "En la clasificación científica de los seres vivos, los animales (Animalia) o metazoos (Metazoa) constituyen un reino que reúne un amplio grupo de organismos que son eucariotas, heterótrofos, pluricelulares y tisulares (excepto los poríferos)."@es ;
+        rdfs:label "Animal"@en ,
+                   "Animal"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#Currency
+:Currency rdf:type owl:Class ;
+          owl:disjointWith :Price ;
+          rdfs:comment "A system of money in general use in a particular country."@en ,
+                       "Un sistema de moneda para ser usado en un país."@es ;
+          rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/price.owl> ;
+          rdfs:label "Currency"@en ,
+                     "Moneda"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#Highway
+:Highway rdf:type owl:Class ;
+         rdfs:subClassOf :Road ;
+         owl:disjointWith :Street ;
+         rdfs:comment "A public road, especially an important road that joins cities or towns together."@en ,
+                      "Carretera con calzadas separadas para los dos sentidos de la circulación, cada una de ellas con dos o más carriles, sin cruces a nivel."@es ;
+         rdfs:label "Autopista"@es ,
+                    "Highway"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#LifeBeing
+:LifeBeing rdf:type owl:Class ;
+           rdfs:comment "Life Being living in a particular Place."@en ,
+                        "Ser vivo que vive en un determinado lugar."@es ;
+           rdfs:label "Life Being"@en ,
+                      "Ser Vivo"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#Plant
+:Plant rdf:type owl:Class ;
+       rdfs:subClassOf :LifeBeing ;
+       rdfs:comment "En biología, se denomina plantas a los organismos con células vegetales que poseen paredes celulares y se componen principalmente de celulosa."@es ,
+                    "Plants are the eukaryotes that form the kingdom Plantae; they are predominantly photosynthetic. This means that they obtain their energy from sunlight, using chloroplasts derived from endosymbiosis with cyanobacteria to produce sugars from carbon dioxide and water."@en ;
+       rdfs:label "Plant"@en ,
+                  "Planta"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#Price
+:Price rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCurrency ;
+                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasValue ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+       rdfs:comment "La cantidad de dinero esperada, requerida o dada en forma de pago por algo."@es ,
+                    "The amount of money expected, required, or given in payment for something."@en ;
+       rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/price.owl> ;
+       rdfs:label "Precio"@es ,
+                  "Price"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#Road
+:Road rdf:type owl:Class ;
+      rdfs:subClassOf <https://schema.org/Place> ;
+      rdfs:comment "A long, hard surface built for vehicles to travel along."@en ,
+                   "Camino público, ancho y espacioso, pavimentado y dispuesto para el tránsito de vehículos."@es ;
+      rdfs:label "Carretera"@es ,
+                 "Road"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#Street
+:Street rdf:type owl:Class ;
+        rdfs:subClassOf :Road ;
+        rdfs:comment "A road in a city or town that has buildings that are usually close together along one or both sides."@en ,
+                     "Vía pública, habitualmente asfaltada o empedrada, entre edificios o solares."@es ;
+        rdfs:label "Calle"@es ,
+                   "Street"@en .
+
+
+###  https://schema.org/BusOrCoach
+<https://schema.org/BusOrCoach> rdf:type owl:Class .
+
+
+###  https://schema.org/Car
+<https://schema.org/Car> rdf:type owl:Class .
+
+
+###  https://schema.org/Landform
+<https://schema.org/Landform> rdf:type owl:Class .
+
+
+###  https://schema.org/LandmarksOrHistoricalBuildings
+<https://schema.org/LandmarksOrHistoricalBuildings> rdf:type owl:Class .
+
+
+###  https://schema.org/LocalBusiness
+<https://schema.org/LocalBusiness> rdf:type owl:Class ;
+                                   owl:disjointWith <https://schema.org/SportsOrganization> .
+
+
+###  https://schema.org/Motorcycle
+<https://schema.org/Motorcycle> rdf:type owl:Class .
+
+
+###  https://schema.org/Organization
+<https://schema.org/Organization> rdf:type owl:Class .
+
+
+###  https://schema.org/Place
+<https://schema.org/Place> rdf:type owl:Class .
+
+
+###  https://schema.org/SportsActivityLocation
+<https://schema.org/SportsActivityLocation> rdf:type owl:Class .
+
+
+###  https://schema.org/SportsOrganization
+<https://schema.org/SportsOrganization> rdf:type owl:Class .
+
+
+###  https://schema.org/TouristAttraction
+<https://schema.org/TouristAttraction> rdf:type owl:Class .
+
+
+###  https://schema.org/Trip
+<https://schema.org/Trip> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.urbanont.com/ontology/urban#carretera_n_es
+:carretera_n_es rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+                <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.lexinfo.net/ontology/2.0/lexinfo#adjective> ;
+                <http://www.w3.org/ns/lemon/ontolex#lexicalForm> :carretera_n_es_form ;
+                <http://www.w3.org/ns/lemon/ontolex#sense> :carretera_n_es_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#carretera_n_es_form
+:carretera_n_es_form rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/lemon/ontolex#Form> ;
+                     <http://www.w3.org/ns/lemon/ontolex#writtenRep> "carretera"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#carretera_n_es_sense
+:carretera_n_es_sense rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+                      <http://www.w3.org/ns/lemon/lexicog#usageExample> :carretera_n_es_sense_ex ;
+                      <http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf> :road_n_en_sense_concept .
+
+
+###  http://www.urbanont.com/ontology/urban#carretera_n_es_sense_ex
+:carretera_n_es_sense_ex rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/ns/lemon/lexicog#UsageExample> ;
+                         rdf:value "Vivimos al lado de una carretera tranquila."@es .
+
+
+###  http://www.urbanont.com/ontology/urban#dimensiones_adj_es
+:dimensiones_adj_es rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+                    <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.lexinfo.net/ontology/2.0/lexinfo#adjective> ;
+                    <http://www.w3.org/ns/lemon/ontolex#lexicalForm> :dimensiones_adj_es_form ;
+                    <http://www.w3.org/ns/lemon/ontolex#sense> :dimensiones_adj_es_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#dimensiones_adj_es_form
+:dimensiones_adj_es_form rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/ns/lemon/ontolex#Form> ;
+                         <http://www.w3.org/ns/lemon/ontolex#writtenRep> "dimensiones"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense
+:dimensiones_adj_es_sense rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+                          <http://www.w3.org/ns/lemon/lexicog#usageExample> :dimensiones_adj_es_sense_ex ;
+                          <http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf> :size_adj_en_sense_concept .
+
+
+###  http://www.urbanont.com/ontology/urban#dimensiones_adj_es_sense_ex
+:dimensiones_adj_es_sense_ex rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/ns/lemon/lexicog#UsageExample> ;
+                             rdf:value "Las dimensiones del piso son de 80 metros cuadrados."@es .
+
+
+###  http://www.urbanont.com/ontology/urban#en_lexicon
+:en_lexicon rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/ns/lemon/lime#Lexicon> ;
+            <http://www.w3.org/ns/lemon/lime#entry> :organization_n_en ,
+                                                    :road_n_en ,
+                                                    :size_adj_en ,
+                                                    :value_adj_en ;
+            <http://purl.org/dc/elements/1.1/language> "en" .
+
+
+###  http://www.urbanont.com/ontology/urban#es_lexicon
+:es_lexicon rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/ns/lemon/lime#Lexicon> ;
+            <http://www.w3.org/ns/lemon/lime#entry> :carretera_n_es ,
+                                                    :dimensiones_adj_es ,
+                                                    :organizacion_n_es ,
+                                                    :valor_adj_es ;
+            <http://purl.org/dc/elements/1.1/language> "es" .
+
+
+###  http://www.urbanont.com/ontology/urban#organizacion_n_es
+:organizacion_n_es rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+                   <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.lexinfo.net/ontology/2.0/lexinfo#noun> ;
+                   <http://www.w3.org/ns/lemon/ontolex#lexicalForm> :organizacion_n_es_form ;
+                   <http://www.w3.org/ns/lemon/ontolex#sense> :organizacion_n_es_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#organizacion_n_es_form
+:organizacion_n_es_form rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/ns/lemon/ontolex#Form> ;
+                        <http://www.w3.org/ns/lemon/ontolex#writtenRep> "organización"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#organizacion_n_es_sense
+:organizacion_n_es_sense rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+                         <http://www.w3.org/ns/lemon/lexicog#usageExample> :organizacion_n_es_sense_ex ;
+                         <http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf> :organization_n_en_sense_concept .
+
+
+###  http://www.urbanont.com/ontology/urban#organizacion_n_es_sense_ex
+:organizacion_n_es_sense_ex rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/ns/lemon/lexicog#UsageExample> ;
+                            rdf:value "Me voy a apuntar a una Organización sin ánimo de lucro."@es .
+
+
+###  http://www.urbanont.com/ontology/urban#organization_n_en
+:organization_n_en rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+                   <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.lexinfo.net/ontology/2.0/lexinfo#noun> ;
+                   <http://www.w3.org/ns/lemon/ontolex#lexicalForm> :organization_n_en_form ;
+                   <http://www.w3.org/ns/lemon/ontolex#sense> :organization_n_en_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#organization_n_en_form
+:organization_n_en_form rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/ns/lemon/ontolex#Form> ;
+                        <http://www.w3.org/ns/lemon/ontolex#writtenRep> "organization"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#organization_n_en_sense
+:organization_n_en_sense rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+                         <http://www.w3.org/ns/lemon/lexicog#usageExample> :organization_n_en_sense_ex ;
+                         <http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf> :organization_n_en_sense_concept .
+
+
+###  http://www.urbanont.com/ontology/urban#organization_n_en_sense_concept
+:organization_n_en_sense_concept rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/ns/lemon/ontolex#LexicalConcept> ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "A group of people who work together in an organized way for a shared purpose."@en .
+
+
+###  http://www.urbanont.com/ontology/urban#organization_n_en_sense_ex
+:organization_n_en_sense_ex rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/ns/lemon/lexicog#UsageExample> ;
+                            rdf:value "The article was about international aid organizations."@en .
+
+
+###  http://www.urbanont.com/ontology/urban#organization_n_sense-organizacion_n_es_sense-tr
+:organization_n_sense-organizacion_n_es_sense-tr rdf:type owl:NamedIndividual ,
+                                                          <http://www.w3.org/ns/lemon/vartrans#Translation> ;
+                                                 <http://www.w3.org/ns/lemon/vartrans#source> :organization_n_en_sense ;
+                                                 <https://schema.org/target> :organizacion_n_es_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#road_n_en
+:road_n_en rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+           <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.lexinfo.net/ontology/2.0/lexinfo#noun> ;
+           <http://www.w3.org/ns/lemon/ontolex#lexicalForm> :road_n_en_form ;
+           <http://www.w3.org/ns/lemon/ontolex#sense> :road_n_en_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#road_n_en_form
+:road_n_en_form rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/ns/lemon/ontolex#Form> ;
+                <http://www.w3.org/ns/lemon/ontolex#writtenRep> "road"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#road_n_en_sense
+:road_n_en_sense rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+                 <http://www.w3.org/ns/lemon/lexicog#usageExample> :road_n_en_sense_ex ;
+                 <http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf> :road_n_en_sense_concept .
+
+
+###  http://www.urbanont.com/ontology/urban#road_n_en_sense-carretera_n_es_sense-tr
+:road_n_en_sense-carretera_n_es_sense-tr rdf:type owl:NamedIndividual ,
+                                                  <http://www.w3.org/ns/lemon/vartrans#Translation> ;
+                                         <http://www.w3.org/ns/lemon/vartrans#source> :road_n_en_sense ;
+                                         <https://schema.org/target> :carretera_n_es_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#road_n_en_sense_concept
+:road_n_en_sense_concept rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/ns/lemon/ontolex#LexicalConcept> ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "A long, hard surface built for vehicles to travel along."@en .
+
+
+###  http://www.urbanont.com/ontology/urban#road_n_en_sense_ex
+:road_n_en_sense_ex rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/lemon/lexicog#UsageExample> ;
+                    rdf:value "We live on a quiet road."@en .
+
+
+###  http://www.urbanont.com/ontology/urban#size_adj_en
+:size_adj_en rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+             <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.lexinfo.net/ontology/2.0/lexinfo#adjective> ;
+             <http://www.w3.org/ns/lemon/ontolex#lexicalForm> :size_adj_en_form ;
+             <http://www.w3.org/ns/lemon/ontolex#sense> :size_adj_en_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#size_adj_en_form
+:size_adj_en_form rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/lemon/ontolex#Form> ;
+                  <http://www.w3.org/ns/lemon/ontolex#writtenRep> "size"@en .
+
+
+###  http://www.urbanont.com/ontology/urban#size_adj_en_sense
+:size_adj_en_sense rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+                   <http://www.w3.org/ns/lemon/lexicog#usageExample> :size_adj_en_sense_ex ;
+                   <http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf> :size_adj_en_sense_concept .
+
+
+###  http://www.urbanont.com/ontology/urban#size_adj_en_sense-dimensiones_adj_es_sense-tr
+:size_adj_en_sense-dimensiones_adj_es_sense-tr rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/ns/lemon/vartrans#Translation> ;
+                                               <http://www.w3.org/ns/lemon/vartrans#source> :size_adj_en_sense ;
+                                               <https://schema.org/target> :dimensiones_adj_es_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#size_adj_en_sense_concept
+:size_adj_en_sense_concept rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/lemon/ontolex#LexicalConcept> ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "How large or small something or someone is."@en .
+
+
+###  http://www.urbanont.com/ontology/urban#size_adj_en_sense_ex
+:size_adj_en_sense_ex rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/lemon/lexicog#UsageExample> ;
+                      rdf:value "The size of the floor is 80 square feet."@en .
+
+
+###  http://www.urbanont.com/ontology/urban#valor_adj_es
+:valor_adj_es rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+              <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.lexinfo.net/ontology/2.0/lexinfo#adjective> ;
+              <http://www.w3.org/ns/lemon/ontolex#lexicalForm> :valor_adj_es_form ;
+              <http://www.w3.org/ns/lemon/ontolex#sense> :valor_adj_es_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#valor_adj_es_form
+:valor_adj_es_form rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/lemon/ontolex#Form> ;
+                   <http://www.w3.org/ns/lemon/ontolex#writtenRep> "valor"@es .
+
+
+###  http://www.urbanont.com/ontology/urban#valor_adj_es_sense
+:valor_adj_es_sense rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+                    <http://www.w3.org/ns/lemon/lexicog#usageExample> :valor_adj_es_sense_ex ;
+                    <http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf> :value_adj_en_sense_concept .
+
+
+###  http://www.urbanont.com/ontology/urban#valor_adj_es_sense_ex
+:valor_adj_es_sense_ex rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/ns/lemon/lexicog#UsageExample> ;
+                       rdf:value "El valor del inmueble es de 150.000€."@es .
+
+
+###  http://www.urbanont.com/ontology/urban#value_adj_en
+:value_adj_en rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+              <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.lexinfo.net/ontology/2.0/lexinfo#adjective> ;
+              <http://www.w3.org/ns/lemon/ontolex#lexicalForm> :value_adj_en_form ;
+              <http://www.w3.org/ns/lemon/ontolex#sense> :value_adj_en_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#value_adj_en_form
+:value_adj_en_form rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/lemon/ontolex#Form> ;
+                   <http://www.w3.org/ns/lemon/ontolex#writtenRep> "value" .
+
+
+###  http://www.urbanont.com/ontology/urban#value_adj_en_sense
+:value_adj_en_sense rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+                    <http://www.w3.org/ns/lemon/lexicog#usageExample> :value_adj_en_sense_ex ;
+                    <http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf> :value_adj_en_sense_concept .
+
+
+###  http://www.urbanont.com/ontology/urban#value_adj_en_sense-valor_adj_es_sense-tr
+:value_adj_en_sense-valor_adj_es_sense-tr rdf:type owl:NamedIndividual ,
+                                                   <http://www.w3.org/ns/lemon/vartrans#Translation> ;
+                                          <http://www.w3.org/ns/lemon/vartrans#source> :value_adj_en_sense ;
+                                          <https://schema.org/target> :valor_adj_es_sense .
+
+
+###  http://www.urbanont.com/ontology/urban#value_adj_en_sense_concept
+:value_adj_en_sense_concept rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/ns/lemon/ontolex#LexicalConcept> ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "The amount of money that can be received for something."@en .
+
+
+###  http://www.urbanont.com/ontology/urban#value_adj_en_sense_ex
+:value_adj_en_sense_ex rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/ns/lemon/lexicog#UsageExample> ;
+                       rdf:value "The value of the building is 150.000€."@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/elements/1.1/> <http://purl.org/dc/terms/modified> "2012-06-14"^^xsd:date ;
+                                   <http://purl.org/dc/terms/publisher> <http://purl.org/dc/aboutdcmi#DCMI> ;
+                                   <http://purl.org/dc/terms/title> "Dublin Core Metadata Element Set, Version 1.1"@en .
+
+
+<http://purl.org/dc/elements/1.1/contributor> <http://purl.org/dc/terms/description> "The guidelines for using names of persons or organizations as creators also apply to contributors.  Typically, the name of a Contributor should be used to indicate the entity."@en ;
+                                              <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                              rdfs:comment "An entity responsible for making contributions to the resource."@en ;
+                                              rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                              rdfs:label "Contributor"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/coverage> <http://purl.org/dc/terms/description> "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges."@en ;
+                                           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                           rdfs:comment "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."@en ;
+                                           rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                           rdfs:label "Coverage"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
+                                          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                          rdfs:comment "An entity primarily responsible for making the resource."@en ;
+                                          rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                          rdfs:label "Creator"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/date> <http://purl.org/dc/terms/description> "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing."@en ;
+                                       <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                       rdfs:comment "A point or period of time associated with an event in the lifecycle of the resource."@en ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                       rdfs:label "Date"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/description> <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
+                                              <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                              rdfs:comment "An account of the resource."@en ;
+                                              rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                              rdfs:label "Description"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/format> <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."@en ;
+                                         <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                         rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
+                                         rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                         rdfs:label "Format"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/identifier> <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
+                                             <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                             rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+                                             rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                             rdfs:label "Identifier"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/publisher> <http://purl.org/dc/terms/description> "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."@en ;
+                                            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                            rdfs:comment "An entity responsible for making the resource available."@en ;
+                                            rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                            rdfs:label "Publisher"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/relation> <http://purl.org/dc/terms/description> "Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided."@en ;
+                                           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                           rdfs:comment "A related resource."@en ;
+                                           rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                           rdfs:label "Relation"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/rights> <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
+                                         <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                         rdfs:comment "Information about rights held in and over the resource."@en ;
+                                         rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                         rdfs:label "Rights"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/source> <http://purl.org/dc/terms/description> "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
+                                         <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                         rdfs:comment "A related resource from which the described resource is derived."@en ;
+                                         rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                         rdfs:label "Source"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/subject> <http://purl.org/dc/terms/description> "Typically, the subject will be represented using keywords, key phrases, or classification codes.  Recommended best practice is to use a controlled vocabulary."@en ;
+                                          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                          rdfs:comment "The topic of the resource."@en ;
+                                          rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                          rdfs:label "Subject"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/subject) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/title> <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                        rdfs:comment "A name given to the resource."@en ;
+                                        rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                        rdfs:label "Title"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/type> <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
+                                       <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                       rdfs:comment "The nature or genre of the resource."@en ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                       rdfs:label "Type"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+:isPerformedBy rdfs:comment "El viaje es realizado por el vehículo."@es ,
+                            "The trip is performed by the vehicle."@en ;
+               rdfs:label "es realizado por"@es ,
+                          "is performed by"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Road
+                <https://schema.org/Landform>
+                <https://schema.org/LandmarksOrHistoricalBuildings>
+                <https://schema.org/SportsActivityLocation>
+                <https://schema.org/TouristAttraction>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://schema.org/BusOrCoach>
+                <https://schema.org/Car>
+                <https://schema.org/Motorcycle>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
